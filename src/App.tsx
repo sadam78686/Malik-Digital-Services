@@ -333,6 +333,89 @@ const WhyUs = () => {
   );
 };
 
+const PayoutProof = () => {
+  const proofs = [
+    { amount: "124.48", date: "Apr 14", type: "Gaming Incentive Program", method: "PayPal (p7****9@gmail.com)" },
+    { amount: "43.45", date: "Apr 14", type: "Gaming Incentive Program", method: "PayPal (p7****9@gmail.com)" },
+    { amount: "15.64", date: "Apr 14", type: "Gaming Incentive Program", method: "PayPal (p7****9@gmail.com)" },
+    { amount: "12.69", date: "Apr 14", type: "Gaming Incentive Program", method: "PayPal (p7****9@gmail.com)" },
+  ];
+
+  return (
+    <section className="py-24 px-6 bg-black relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#ff0050]/5 rounded-full blur-[120px]"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-4 text-white">
+            Asli Kamayi Ke <span className="text-[#ff0050]">Saboot</span>
+          </h2>
+          <p className="text-white/40 font-bold uppercase tracking-widest text-sm italic border-l-4 border-[#ff0050] pl-4">
+            Recent TikTok Payouts From Our Training Group
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {proofs.map((proof, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-[32px] p-6 text-black shadow-2xl relative"
+            >
+              <div className="flex justify-between items-center mb-10">
+                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
+                   <div className="w-6 h-6 border-2 border-black rounded-sm flex items-center justify-center p-1">
+                      <div className="w-full h-[2px] bg-black"></div>
+                   </div>
+                </div>
+                <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Payout Details</span>
+              </div>
+              
+              <div className="text-center mb-10">
+                <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-1 italic">Payout sent on {proof.date}</p>
+                <div className="flex items-center justify-center">
+                  <span className="text-xl font-black mt-2 mr-1">USD</span>
+                  <span className="text-6xl font-black tracking-tighter">{proof.amount.split('.')[0]}</span>
+                  <span className="text-2xl font-black mt-1">.{proof.amount.split('.')[1]}</span>
+                </div>
+              </div>
+
+              <div className="space-y-6 pt-6 border-t border-gray-100">
+                <div className="flex justify-between items-start gap-4 text-[10px]">
+                  <span className="text-gray-400 font-bold uppercase tracking-widest">Status</span>
+                  <span className="text-[#00C853] font-black flex items-center gap-1 uppercase tracking-tighter">
+                    <CheckCircle2 className="w-3 h-3 fill-[#00C853] text-white" /> Completed
+                  </span>
+                </div>
+                <div className="flex justify-between items-start gap-4 text-[10px]">
+                  <span className="text-gray-400 font-bold uppercase tracking-widest">Activity</span>
+                  <span className="text-black font-black uppercase text-right leading-tight max-w-[120px]">{proof.type}</span>
+                </div>
+                <div className="flex justify-between items-start gap-4 text-[10px]">
+                  <span className="text-gray-400 font-bold uppercase tracking-widest">Method</span>
+                  <span className="text-black font-black text-right italic">{proof.method}</span>
+                </div>
+              </div>
+              
+              {/* Authentic TikTok details watermark */}
+              <div className="mt-8 flex justify-center">
+                 <div className="bg-gray-50 px-4 py-2 rounded-full text-[9px] font-black uppercase tracking-widest text-gray-300">
+                    Trusted Student Success
+                 </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const SuccessStories = () => {
   const cards = [
     { name: "Ahmed R.", amount: "$1,240", time: "2 Months", city: "Lahore" },
@@ -499,6 +582,7 @@ export default function LandingPage() {
         </section>
 
         <SuccessStories />
+        <PayoutProof />
         <PricingPlans />
         <FAQSection />
         <CTASection />
