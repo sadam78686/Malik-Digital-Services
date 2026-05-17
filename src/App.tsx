@@ -16,9 +16,9 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black/80 backdrop-blur-md border-b border-white/10 py-3" : "bg-transparent py-5"}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#ff0050] rounded-lg flex items-center justify-center font-bold text-xl shadow-[4px_4px_0px_#00f2ea]">M</div>
-          <span className="text-2xl font-black tracking-tighter text-white uppercase italic">MALIK DIGITAL <span className="text-[#00f2ea]">AGENCY</span></span>
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-[#ff0050] rounded-lg flex items-center justify-center font-bold text-lg md:text-xl shadow-[2px_2px_0px_#00f2ea] md:shadow-[4px_4px_0px_#00f2ea]">M</div>
+          <span className="text-lg md:text-2xl font-black tracking-tighter text-white uppercase italic">MALIK <span className="hidden xs:inline">DIGITAL</span> <span className="text-[#00f2ea]">SERVICES</span></span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-[10px] font-bold text-white uppercase tracking-widest bg-white/5 py-2 px-6 rounded-full border border-white/10">
           <span className="flex items-center gap-2">
@@ -53,17 +53,17 @@ const Hero = () => {
            transition={{ duration: 0.6 }}
            className="text-left"
         >
-          <div className="flex items-center gap-2 mb-6">
-            <span className="w-12 h-1 bg-[#00f2ea] rounded-full"></span>
-            <span className="text-[#00f2ea] text-sm font-black uppercase tracking-[0.4em]">Directly From Pakistan</span>
+          <div className="flex items-center gap-2 mb-4 md:mb-6">
+            <span className="w-8 md:w-12 h-1 bg-[#00f2ea] rounded-full"></span>
+            <span className="text-[#00f2ea] text-[10px] md:text-sm font-black uppercase tracking-[0.2em] md:tracking-[0.4em]">Directly From Pakistan</span>
           </div>
-          <h1 className="text-[60px] md:text-[100px] font-black text-white leading-[0.85] tracking-tighter uppercase mb-8 italic">
-            TikTok Par Ghanton <br />
+          <h1 className="text-[42px] sm:text-[60px] md:text-[100px] font-black text-white leading-[0.9] md:leading-[0.85] tracking-tighter uppercase mb-6 md:mb-8 italic">
+            TikTok Par <br className="md:hidden" /> Ghanton <br />
             <span className="text-[#ff0050]">Videos</span> Kyun <br />
             Dekhte Ho?
           </h1>
-          <p className="text-2xl md:text-4xl font-light text-white/80 max-w-3xl mb-12 leading-tight border-l-4 border-[#00f2ea] pl-8">
-            Pakistan mae baith kar <span className="text-white font-black italic underline decoration-[#ff0050]">Mahana Hazaron Dollars</span> kamao. Hum dein ge aap ko 100% Verified USA/UK Monetized Accounts.
+          <p className="text-xl md:text-4xl font-light text-white/80 max-w-3xl mb-8 md:mb-12 leading-tight border-l-4 border-[#00f2ea] pl-5 md:pl-8">
+            Pakistan mae baith kar <span className="text-white font-black italic underline decoration-[#ff0050]">Mahana Hazaron Dollars</span> kamao. <span className="hidden sm:inline">Hum dein ge aap ko 100% Verified USA/UK Monetized Accounts.</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6">
@@ -449,7 +449,7 @@ const ProcessSteps = () => {
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#010101] text-white font-sans selection:bg-[#00f2ea] selection:text-black scroll-smooth flex flex-col relative border-[12px] border-[#00f2ea] md:border-[16px]">
+    <div className="min-h-screen bg-[#010101] text-white font-sans selection:bg-[#00f2ea] selection:text-black scroll-smooth flex flex-col relative border-[6px] border-[#00f2ea] md:border-[16px]">
       <Navbar />
       <main className="flex-1">
         <Hero />
