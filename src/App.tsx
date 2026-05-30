@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2 md:gap-3">
           <div className="w-8 h-8 md:w-10 md:h-10 bg-[#ff0050] rounded-lg flex items-center justify-center font-bold text-lg md:text-xl shadow-[2px_2px_0px_#00f2ea] md:shadow-[4px_4px_0px_#00f2ea]">M</div>
-          <span className="text-lg md:text-2xl font-black tracking-tighter text-white uppercase italic">MALIK <span className="hidden xs:inline">DIGITAL</span> <span className="text-[#00f2ea]">SERVICES</span></span>
+          <span className="text-base sm:text-lg md:text-2xl font-black tracking-tighter text-white uppercase italic">MALIK DIGITAL <span className="text-[#00f2ea]">SERVICES</span></span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-[10px] font-bold text-white uppercase tracking-widest bg-white/5 py-2 px-6 rounded-full border border-white/10">
           <span className="flex items-center gap-2">
@@ -63,7 +63,8 @@ const Hero = () => {
             Dekhte Ho?
           </h1>
           <p className="text-xl md:text-4xl font-light text-white/80 max-w-3xl mb-8 md:mb-12 leading-tight border-l-4 border-[#00f2ea] pl-5 md:pl-8">
-            Pakistan mae baith kar <span className="text-white font-black italic underline decoration-[#ff0050]">Mahana Hazaron Dollars</span> kamao. <span className="hidden sm:inline">Hum dein ge aap ko 100% Verified USA/UK Monetized Accounts.</span>
+            Pakistan mae baith kar <span className="text-white font-black italic underline decoration-[#ff0050]">Mahana Hazaron Dollars</span> kamao. <span className="hidden sm:inline">Hum dein ge aap ko 100% Verified USA/UK Monetized Accounts.</span> <br className="hidden md:inline" />
+            <span className="text-[#00f2ea] font-extrabold italic">Or ab sirf 1000 followers pay earning start krain Malik Digital Services ki help se!</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6">
@@ -271,6 +272,7 @@ const Footer = () => {
 const FAQSection = () => {
   const faqs = [
     { q: "Kya Pakistan mae account monetize hota hai?", a: "Ji haan! Lekin us ke liye USA ya UK ka verified account chahiye hota hai jo hum provide karte hain." },
+    { q: "Earning start karne ke liye kitne followers chahiye?", a: "Ab aap sirf 1000 followers pay earning start krain Malik Digital Services ki help se!" },
     { q: "Withdrawal kaise milega?", a: "Withdrawal hum khud setup karwa kar dete hain aur aap ke Pakistani bank (like JazzCash/SadaPay/Bank) mae direct transfer hota hai." },
     { q: "Account shadowban tu nahi hoga?", a: "Nahi, kyunke hum VPN ki jagah dedicated setup recommend karte hain jo 100% safe hai." }
   ];
@@ -297,6 +299,7 @@ const FAQSection = () => {
 
 const WhyUs = () => {
   const features = [
+    { title: "1K Followers Earning", icon: <TrendingUp className="w-12 h-12" />, desc: "Ab sirf 1000 followers pay earning start krain Malik Digital Services ki help se." },
     { title: "100% Safe Methods", desc: "Hum sirf wahi tarike istemal karte hain jo TikTok ki terms ke mutabiq hain.", icon: <ShieldCheck className="w-12 h-12" /> },
     { title: "24/7 Direct Support", icon: <MessageCircle className="w-12 h-12" />, desc: "Aap ko kabhi bhi masla ho, hamari team rabte ke liye hazir hai." },
     { title: "Verified Payouts", icon: <DollarSign className="w-12 h-12" />, desc: "Aap ke dollars safe Pakistani bank account mae lane ki zimaydari hamari." }

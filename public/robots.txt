@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://malik-digital-services-9i7e.vercel.app/sitemap.xml
